@@ -6,6 +6,8 @@ require (
 	entgo.io/contrib v0.4.5
 	entgo.io/ent v0.12.3
 	github.com/99designs/gqlgen v0.17.5-0.20220428154617-9250f9ac1f90
+	github.com/aws/aws-lambda-go v1.41.0
+	github.com/awslabs/aws-lambda-go-api-proxy v0.14.0
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/jszwec/csvutil v1.8.0
 	github.com/vektah/gqlparser/v2 v2.4.3-0.20220508162109-d3d9eb001575
@@ -31,8 +33,8 @@ require (
 	github.com/mitchellh/go-wordwrap v0.0.0-20150314170334-ad45545899c7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
-	github.com/vmihailenco/msgpack/v5 v5.0.0-beta.9 // indirect
-	github.com/vmihailenco/tagparser v0.1.2 // indirect
+	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
+	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	github.com/zclconf/go-cty v1.8.0 // indirect
 	golang.org/x/exp v0.0.0-20221230185412-738e83a70c30 // indirect
 	golang.org/x/mod v0.10.0 // indirect
