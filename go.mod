@@ -7,6 +7,7 @@ require (
 	entgo.io/ent v0.12.3
 	github.com/99designs/gqlgen v0.17.5-0.20220428154617-9250f9ac1f90
 	github.com/hashicorp/go-multierror v1.1.1
+	github.com/jszwec/csvutil v1.8.0
 	github.com/vektah/gqlparser/v2 v2.4.3-0.20220508162109-d3d9eb001575
 	golang.org/x/sync v0.1.0
 	modernc.org/sqlite v1.25.0
