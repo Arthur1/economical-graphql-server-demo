@@ -5,7 +5,6 @@ package graph
 
 import (
 	"context"
-	"fmt"
 
 	"entgo.io/contrib/entgql"
 	"github.com/Arthur1/economical-graphql-server-demo/ent"
@@ -13,19 +12,19 @@ import (
 )
 
 func (r *queryResolver) Node(ctx context.Context, id int) (ent.Noder, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.Client.Noder(ctx, id, ent.WithFixedNodeType(getTypeFromID(id)))
 }
 
 func (r *queryResolver) Nodes(ctx context.Context, ids []int) ([]ent.Noder, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.Client.Noders(ctx, ids)
 }
 
 func (r *queryResolver) Artists(ctx context.Context, after *entgql.Cursor[int], first *int, before *entgql.Cursor[int], last *int, where *ent.ArtistWhereInput) (*ent.ArtistConnection, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.Client.Artist.Query().Paginate(ctx, after, first, before, last, ent.WithArtistFilter(where.Filter))
 }
 
 func (r *queryResolver) Songs(ctx context.Context, after *entgql.Cursor[int], first *int, before *entgql.Cursor[int], last *int, where *ent.SongWhereInput) (*ent.SongConnection, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.Client.Song.Query().Paginate(ctx, after, first, before, last, ent.WithSongFilter(where.Filter))
 }
 
 // Query returns generated.QueryResolver implementation.
